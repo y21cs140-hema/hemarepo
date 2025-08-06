@@ -1,0 +1,25 @@
+pipeline{
+    agent any 
+    stages{
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/y21cs140-hema/hemarepo.git'
+            }           
+        }
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+            }
+        }
+        stage('Tests') {
+            steps {
+                echo 'Running tests...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application...'
+            }
+        }
+    }
+}
